@@ -11,8 +11,5 @@ public abstract class Instalacion {
         return nombre;
     }
 
-    // Métodos para verificar el tipo de instalación
-    public abstract boolean esEjecutiva();
-    public abstract boolean esBasica();
-    public abstract boolean esPremium();
+    public abstract boolean verificarAcceso(Usuario usuario);
 }

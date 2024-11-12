@@ -4,17 +4,23 @@ import interfaces.Acceso;
 
 public class Usuario implements Acceso {
     private String nombre;
+    private int edad;
     private int dni;
     private Credencial credencial;
 
-    public Usuario(String nombre, int dni, Credencial credencial) {
+    public Usuario(String nombre,int edad,  int dni, Credencial credencial) {
         this.nombre = nombre;
+        this.edad = edad;
         this.dni = dni;
         this.credencial = credencial;
     }
 
     public String getNombre() {
         return nombre;
+    }
+
+    public int getEdad() {
+        return edad;
     }
 
     public int getDni() {
@@ -27,6 +33,6 @@ public class Usuario implements Acceso {
 
     @Override
     public boolean tieneAcceso(Instalacion instalacion) {
-        return credencial.puedeAcceder(instalacion);
+        return instalacion.verificarAcceso(this);
     }
 }

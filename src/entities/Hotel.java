@@ -11,7 +11,7 @@ public class Hotel {
 
     public Hotel() {
         instalaciones = new ArrayList<>();
-        instalaciones.add(new Bar());
+        instalaciones.add(new Casino());
     }
 
     public void registrarUsuario(Usuario usuario) throws UsuarioYaRegistradoException {
