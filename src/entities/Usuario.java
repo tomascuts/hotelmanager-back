@@ -2,7 +2,7 @@ package entities;
 
 import interfaces.Acceso;
 
-public class Usuario implements Acceso {
+public class Usuario {
     private String nombre;
     private int edad;
     private int dni;
@@ -29,10 +29,5 @@ public class Usuario implements Acceso {
 
     public Credencial getCredencial() {
         return credencial;
-    }
-
-    @Override
-    public boolean tieneAcceso(Instalacion instalacion) {
-        return instalacion.verificarAcceso(this);
     }
 }
