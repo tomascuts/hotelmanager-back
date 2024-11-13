@@ -1,4 +1,5 @@
 import entities.Hotel;
+import entities.Instalacion;
 import entities.Usuario;
 import entities.Credencial;
 
@@ -6,6 +7,8 @@ public class Main {
     public static void main(String[] args) {
         mostrarAccesos();
     }
+
+
 
     public static void mostrarAccesos(){
         Usuario ana = new Usuario("Ana", 19, 27889345, new Credencial(1));

@@ -3,8 +3,10 @@ package entities;
 public class Casino extends Instalacion {
     private int edadMinima;
 
-    public Casino() {
+    public Casino(int edadMinima) {
+
         super("Casino");
+        this.edadMinima = edadMinima;
     }
 
     @Override

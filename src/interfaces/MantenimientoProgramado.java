@@ -1,8 +1,8 @@
 package interfaces;
 
+import java.util.Date;
+
 public interface MantenimientoProgramado {
-    void programarMantenimiento(String fecha);
-    //boolean realizarMantenimiento();
-    //boolean enMantenimiento();
-    //String obtenerFechaProximaMantenimiento();
+    void programarMantenimiento(Date fecha);
+    Date obtenerProximaFechaMantenimiento();
 }
