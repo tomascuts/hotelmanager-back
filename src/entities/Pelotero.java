@@ -1,11 +1,11 @@
 package entities;
 
-public class Bar extends InstalacionConCosto {
-    private int edadMinima;
+public class Pelotero extends InstalacionConCosto {
+    private int edadMaxima;
 
-    public Bar(String nombre, int costoEntrada, int edadMinima) {
+    public Pelotero(String nombre, int costoEntrada, int edadMaxima) {
         super(nombre, costoEntrada);
-        this.edadMinima = edadMinima;
+        this.edadMaxima = edadMaxima;
     }
 
     @Override
@@ -15,6 +15,6 @@ public class Bar extends InstalacionConCosto {
 
     @Override
     public boolean verificarAcceso(Usuario usuario) {
-        return usuario.getEdad() >= edadMinima;
+        return usuario.getEdad() <= edadMaxima;
     }
 }
