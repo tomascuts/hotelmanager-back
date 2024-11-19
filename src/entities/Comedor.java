@@ -1,10 +1,9 @@
 package entities;
 
 import interfaces.MantenimientoProgramado;
+
+import java.time.LocalDate;
 import java.util.Date;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
 
 public class Comedor extends Instalacion implements MantenimientoProgramado {
 
@@ -16,6 +15,10 @@ public class Comedor extends Instalacion implements MantenimientoProgramado {
     private int capacidadMaxima;
     private int personasEnElComedor;
     private Date fechaProximoMantenimiento;
+
+    public void printCantidadPersonas(){
+        System.out.println("La cantidad de usuarios en el comedor es: " + personasEnElComedor);
+    }
 
     @Override
     public boolean verificarAcceso(Usuario usuario) {
@@ -32,7 +35,9 @@ public class Comedor extends Instalacion implements MantenimientoProgramado {
 
     @Override
     public void programarMantenimiento(Date fecha) {
+
         this.fechaProximoMantenimiento = fecha;
+        System.out.println("\nSe programo el mantenimiento de para la fecha: " + fecha);
     }
 
     @Override
