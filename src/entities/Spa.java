@@ -1,12 +1,15 @@
 package entities;
 
 import interfaces.MantenimientoProgramado;
+
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
 public class Spa extends Instalacion implements MantenimientoProgramado {
     public Spa() {
-        super("Spa 1");
+        super("Spa");
+        listaAccesosUsuarios = new ArrayList<Usuario>();
     }
 
     private int cantidadAccesosPermitido;
@@ -34,6 +37,7 @@ public class Spa extends Instalacion implements MantenimientoProgramado {
     @Override
     public void programarMantenimiento(Date fecha) {
         this.fechaProximoMantenimiento = fecha;
+        System.out.println("\nSe programo el mantenimiento de para la fecha: " + fecha);
     }
 
     @Override
