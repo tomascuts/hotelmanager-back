@@ -15,6 +15,6 @@ public class Pelotero extends InstalacionConCosto {
 
     @Override
     public boolean verificarAcceso(Usuario usuario) {
-        return usuario.getEdad() <= edadMaxima;
+        return verificarSaldoSuficiente(usuario) && usuario.getEdad() <= edadMaxima ;
     }
 }
